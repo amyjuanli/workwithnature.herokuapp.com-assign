@@ -70,9 +70,6 @@
          var lng = event.latLng.lng();
          $('#latitude').val(lat);
          $('#longitude').val(lng);
-
-        // pass coords to php function
-        $.post('')
         });
     }
     
@@ -87,10 +84,10 @@
             fillOpacity: 0.35,
             map: map,
             bounds: {
-              north: lat + .0001,
-              south: lat - .0001,
-              east: lng + .0001,
-              west: lng - .0001
+              north: lat + .0000001,
+              south: lat - .0000001,
+              east: lng + .0000001,
+              west: lng - .0000001
             }
         });
     }
