@@ -1,0 +1,16 @@
+html, body
+{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+#map,
+#list {
+    width: 45%;
+    height: 500px;
+    display: inline-block;
+}
+/* #list {
+    margin: -100px;
+} */
