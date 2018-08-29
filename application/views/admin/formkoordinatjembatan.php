@@ -16,7 +16,11 @@
                     <h3 class="panel-title"><span class="glyphicon glypicon-globe"></span>Form Marker</h3>
                 </div>
                 <div class="panel-body">
+<<<<<<< HEAD
                     <form action="CoordinateController/addCoords" method="post">
+=======
+                    <form action="koordinatjembatan/storeCoords" method="post">
+>>>>>>> 724c25a4b424422679dfb33dd5b6c35f91495c6d
                         <div class="row">
                               <div class="col-md-6 col-sm-6">
                                     <div class="form-group">

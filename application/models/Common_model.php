@@ -4,11 +4,19 @@
 class Common_model extends CI_Model{
      
      
+<<<<<<< HEAD
     public function addLatLng($latitude, $longitude){      
+=======
+    public function formkoordinatjembatan($latitude, $longitude){      
+>>>>>>> 724c25a4b424422679dfb33dd5b6c35f91495c6d
         $coordinates = array(
           'latitude'=>$latitude,
           'longitude'=>$longitude
         );
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 724c25a4b424422679dfb33dd5b6c35f91495c6d
         $query = $this->db->insert('donations', $coordinates);
         return $query;
     }
