@@ -13,5 +13,14 @@ class DonationModel extends CI_Model {
                 ORDER BY squaremeter DESC';
         return $this->db->query($sql, [$donor_id])->result_array();
    }
+   public function totalDonationsByDonor($donor_id) {
+       $sql = 'SELECT sum(squaremeter) AS total FROM donations WHERE donor_id = ?;';
+       return $this->db->query($sql, [$donor_id])->row_array();
+   }
+   public function getDonation($id)
+   {
+       $sql = 'SELECT id, latitude, longitude, squaremeter FROM donations WHERE id = ?;';
+       return $this->db->query($sql, [$id])->row_array();
+   }
 
 }

@@ -1,17 +1,14 @@
 
 <!-- pass PHP data from controller to javascript -->
 <?php
-if (!empty($donations)) {
-  echo "<script type='text/javascript'>";
-  echo "var donations = " . json_encode($donations) . "\n";
-  echo "</script>";
+// var_dump($donation); die();
+if (!empty($donation)) {
+    echo "<script type='text/javascript'>";
+    echo "var donation = " . json_encode($donation) . "\n";
+    echo "</script>";
 }
+
 ?>
-
-<script type="text/javascript">
-  console.log(donations[0]);
-</script>
-
 
 
 <script type="text/javascript">
@@ -26,11 +23,10 @@ if (!empty($donations)) {
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             myOptions);
-            console.log(donations);
 
-        for(var i = 0; i < donations.length; i++) {
-            var lat = Number(donations[i]['latitude']); 
-            var lng = Number(donations[i]['longitude']);
+            var lat = Number(donation['latitude']); 
+            console.log('lat', lat);
+            var lng = Number(donation['longitude']);
             var rectangle = new google.maps.Rectangle({
             strokeColor: '#00FF00',
             strokeOpacity: 0.8,
@@ -45,7 +41,7 @@ if (!empty($donations)) {
               west: lng - .001
             }
         }); 
-        }
+        
     }
 
   // add a rectangle on click 
@@ -61,18 +57,17 @@ if (!empty($donations)) {
             fillOpacity: 0.35,
             map: map,
             bounds: {
-              north: lat + .0001,
-              south: lat - .0001,
-              east: lng + .0001,
-              west: lng - .0001
+              north: lat + .001,
+              south: lat - .001,
+              east: lng + .001,
+              west: lng - .001
             }
         });
     }
 
-     
-
-    
 </script>
+
+
 
 <div class="left">
 		<div class="container-fluid">
@@ -81,28 +76,18 @@ if (!empty($donations)) {
 	</div>
 	<div class="right">
 		<div class="container-fluid">
-			<h1>Hello <?= $donor['firstname'] . ' ' . $donor['insertion'] . ' ' . $donor['lastname'] ?></h1>
-			<p class="lead">These are your pieces of adopted rainforest. Take a look:</p>
-            <form action="/show" method="POST">
-				<div class="sizing form-group">
-				    <input type="text" class="form-control" id="email" name="email" placeholder="Your Email*">
-				</div>
-				<div class="find">
-					<input class="button form-control" type="submit" name="find" value="Find">
-				</div>		
-            </form>
-      
-                <?php 
-                $i = 1;
-                foreach ($donations as $donation) { ?>
-                        <a href="/donation/show/<?= $donation['id'] ?>">
-                          <?=$i ?>
-                            <?=$donation['latitude'] ?>
-                            <?=$donation['longitude'] ?>
-                            </a>
-                            <?php $i++; ?>
-                            <br>
-                <?php } ?>
+        <!-- show images -->
+        <?=$donation['latitude'] ?> / <?=$donation['longitude'] ?>
+        <p class="heading">PROTECTOR <br><?php
+        $donor =$this->session->userdata('donor');
+        if (!empty($donor)) {
+            echo $donor['firstname'] . ' ' . $donor['insertion'] . ' ' . $donor['lastname'];
+        }
+        ?></p>
+        <p class="heading"></p>SQUARE METERS<br><?=$donation['squaremeter']?></p>
+        <p class="heading">ADOPTED A TOTAL OF <br><?=$donations['total'] ?>m<span style="text-transform: uppercase;">2</span></p>
+
+                
 			<br>
 			<br>
 

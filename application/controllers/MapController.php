@@ -12,17 +12,26 @@ class MapController extends CI_Controller {
         $this->load->view('maps/index.php');
 	}
 	
-	public function show() {
+	public function show() // show all donations
+	{ 
 		$postData = $this->input->post(NULL, true);
 		$donorData = $this->load()->getUserByEmail($postData['email']);
+		$donations = $this->load()->getAllByDonorID($donorData['id']);
+		$this->session->set_userdata('donor', $donorData);
+
 		$this->load->view('maps/show.php', [
-			'donations' => $this->load()->getAllByDonorID($donorData['id']),
-			'donor' => $this->load()->getUserByEmail($postData['email'])
+			'donations' =>$donations,
+			'donor' => $donorData
 			]
 		);
 	}
-	public function donation_detail() {
-		
+	public function donation($id) // show the detail of one donation
+	{ 
+		$donor_id = $this->session->userdata('donor')['id'];
+		$this->load->view('maps/donation.php', [
+			'donation' =>$this->load()->getDonation($id),
+			'donations' =>$this->load()->totalDonationsByDonor($donor_id),
+		]);
 	}
 
 
