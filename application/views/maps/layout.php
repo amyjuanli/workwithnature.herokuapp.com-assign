@@ -16,6 +16,12 @@
     src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
     
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/maps/main.css">
+    <style>
+     .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+    </style>
 </head>
 <body>
 
