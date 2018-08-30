@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container-fluid, #map_canvas {
+    height: 100%;
+}
+
+body {
+    /*background-color: #43c86a;*/
+    color: white;
+}
+
+
+.left {
+    background-color: #f8f8ff;
+    float: left;
+    width: 50%;
+    height: 100vh;
+}
+
+.right {
+    background-color: #43c86a;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    padding-top: 15%;
+    text-align: center;
+}
+
+.placeholder_image {
+    width: 100%;
+}
+
+.button
+{
+    border-radius: 50px;
+    width: 350px;
+    background-color: white;
+    color: #43c86a;
+    font-weight: bold;
+    }
+
+.sizing {
+    width: 80%;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.find {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.registration {
+    width: 70%;
+    display: inline-block;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    border-radius: 50px;
+    border: 2px solid white;
+    color: white;
+    background-color: #43c86a;
+    font-weight: bold;
+}
+
+/* show list of donations */
+#donations-table {
+    width: 100%;
+}
+
+
