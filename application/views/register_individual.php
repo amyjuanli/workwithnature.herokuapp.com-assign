@@ -40,38 +40,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<strong>I would like to adopt:*</strong>
 			<fieldset class="form-group">
 				<div class="form-check">
-		           <input class="form-check-input" type="radio" name="squaremeter" value="1">
+		           <input class="form-check-input" type="radio" name="squaremeter" value="1" <?php if (isset($_POST['squaremeter']) && $_POST['squaremeter']=="1") echo "checked";?>> 
 		           <label class="form-check-label">
 		               1 m2 (€ 2,50)
 		           </label>
 		       	</div>
 		       	<div class="form-check">
-		           <input class="form-check-input" type="radio" name="squaremeter" value="4">
+		           <input class="form-check-input" type="radio" name="squaremeter" value="4" <?php if (isset($_POST['squaremeter']) && $_POST['squaremeter']=="4") echo "checked";?>> 
 		           <label class="form-check-label">
 		               4 m2 (€ 10,-)
 		           </label>
 		       	</div>
 		       	<div class="form-check">
-		           <input class="form-check-input" type="radio" name="squaremeter" value="10">
+		           <input class="form-check-input" type="radio" name="squaremeter" value="10" <?php if (isset($_POST['squaremeter']) && $_POST['squaremeter']=="10") echo "checked";?>> 
 		           <label class="form-check-label">
 		               10 m2 (€ 25,-)
 		           </label>
 		       	</div>
 		       	<div class="form-check">
-		           <input class="form-check-input" type="radio" name="squaremeter" value="20">
+		           <input class="form-check-input" type="radio" name="squaremeter" value="20" <?php if (isset($_POST['squaremeter']) && $_POST['squaremeter']=="20") echo "checked";?>> 
 		           <label class="form-check-label">
 		               20 m2 (€ 50,-)
 		           </label>
 		       	</div>
-		       	<div class="form-check">
-		           <input class="form-check-input" type="radio" name="squaremeter" value="other">
-		           <label class="form-check-label">
-		              Otherwise, namely (m2): <input type="text" name="squaremeter" placeholder="m2">
+				<div class="form-check">
+		           <input class="form-check-input" type="radio" name="squaremeter">
+		           <label class="form-check-label">la
+		              Otherwise, namely (m2): <input type="text" name="sqm" placeholder="m2">
 		           </label>
 		       	</div> 
 	  		</fieldset>
-
+			 
        	</div> 
+
+		
 
 	    <hr>
 
@@ -172,7 +174,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<br>
 
 		<div class="form-group">
-		    <input type="text" class="form-control" id="street" name="street" placeholder="Street + Number" value='<?php echo set_value('street')?>'>
+		    <input type="text" class="form-control" id="address" name="address" placeholder="Street + Number" value='<?php echo set_value('street')?>'>
 		</div>
 		<div class="form-group">
 		    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Postal/ZIP code" value='<?php echo set_value('zipcode')?>'>
@@ -200,19 +202,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    <p><strong>Did you choose for a periodically donation, then please choose your gift:</strong></p>
 		    <div class="form-check">
 		      <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="gift" id="toucan" value="toucan" <?php if (isset($_POST['gift']) && $_POST['gift']=="toucan") echo "checked";?>>
+		        <input type="radio" class="form-check-input" name="gift" id="toucan" value="toucan" <?php if (isset($_POST['gift']) && $_POST['gift']=="toucan") echo "checked";?> >
 		        Wonderful high resolution PDF of a watercolor painting (Toucan)
 		      </label>
 		    </div>
 		    <div class="form-check">
 		    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="gift" id="jaguar" value="jaguar" <?php if (isset($_POST['gift']) && $_POST['gift']=="jaguar") echo "checked";?>>
+		        <input type="radio" class="form-check-input" name="gift" id="jaguar" value="jaguar" <?php if (isset($_POST['gift']) && $_POST['gift']=="jaguar") echo "checked";?> >
 		        Wonderful high resolution PDF of a watercolor painting (Jaguar)
 		      </label>
 		    </div>
 		    <div class="form-check">
 		    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="gift" id="nogift" value="nogift" <?php if (isset($_POST['gift']) && $_POST['gift']=="nogift") echo "checked";?>>
+		        <input type="radio" class="form-check-input" name="gift" id="nogift" value="nogift" <?php if (isset($_POST['gift']) && $_POST['gift']=="nogift") echo "checked";?> >
 		        No, thanks
 		      </label>
 		    </div>

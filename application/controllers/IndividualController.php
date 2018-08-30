@@ -35,6 +35,7 @@ class IndividualController extends CI_Controller {
 	public function donate_now()
 	{
 		$this->form_validation->set_rules('squaremeter', 'donation amount', 'trim|alpha_numeric_spaces|required');
+		$this->form_validation->set_rules('sqm', 'donation amount', 'trim|numeric');
 		$this->form_validation->set_rules('timeframe', 'time period', 'required');
 		$this->form_validation->set_rules('iban_agree', 'IBAN agreement', 'required');
 		$this->form_validation->set_rules('iban', 'IBAN', 'required|min_length[18]|max_length[18]'); 
@@ -53,7 +54,7 @@ class IndividualController extends CI_Controller {
 			$this->load->view('register_individual', $data); 
 		} else {
 			$info = $this->input->post(NULL, TRUE);
-
+			
 			// echo '<pre>';
 			// var_dump($info);
 			// echo '</pre>';
@@ -66,7 +67,7 @@ class IndividualController extends CI_Controller {
 				'bankaccount' => $info['iban'],
 				'salutation' => $info['salutation'],
 				'firstname' => $info['firstname'],
-				'inserstion' => $info['insertion'],
+				'insertion' => $info['insertion'],
 				'lastname' => $info['lastname'],
 				'birthdate' => $info['birthdate'],
 				'address' => $info['address'],
@@ -75,13 +76,24 @@ class IndividualController extends CI_Controller {
 				'email' => $info['email'],
 				'password' => $info['password'],
 				'referral_method' => $info['referral_method'],
-				'gift' => $info['gift'],
+				'gift' => $info['gift']
 			);
 
-			$donationdata = array(
-				'squaremeter' => $info['squaremeter']
-				# also insert the donor id here, which is auto-incremented from table donors
-			);
+			if ($info['squaremeter'] == "on") {
+				$donationdata = array(
+					'squaremeter' => $info['sqm']
+				);
+			} else {
+				$donationdata = array(
+					'squaremeter' => $info['squaremeter']
+				);
+			}
+			
+			// $donationdata = array(
+			// 	'squaremeter' => $info['squaremeter']
+			// 	'squaremeter' => $info['sqm']
+			// 	# also insert the donor id here, which is auto-incremented from table donors
+			// );
 
 			$this->load->model('individual');
 			$this->individual->add_donor($donordata);
