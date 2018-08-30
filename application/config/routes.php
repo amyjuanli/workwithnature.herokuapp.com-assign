@@ -13,7 +13,7 @@ $route['homepage2'] = 'individualcontroller/homepage2';
 $route['donatemore'] = 'individualcontroller/donatemore';
 
 $route['company'] = 'companycontroller/index';
-$route['addCompany'] = 'companycontrollery/addCompany';
+$route['addCompany'] = 'companycontroller/addCompany';
 $route['coordinate'] = 'CoordinateController';
 $route['show'] = 'MapController/show';
 $route['donation/show/(:num)'] = 'MapController/donation/$1';

@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         
-            <form action="/addCompany" method ="POST">
+            <form action="companycontroller/addCompany" method ="POST">
                 <div class="form-group">
                     <input type="text" class="form-control" name="company_name" placeholder="Company Name*" value="<?php echo set_value('firstname'); ?>">
                 </div>
@@ -39,7 +39,7 @@
                             <input type="text" class="form-control" id="exampleInputEmail1" name="firstname" placeholder="First Name*" value="<?php echo set_value('firstname'); ?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="lastname" placeholder="Last Name*" value="<?php echo set_value('lastname'); ?>>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="lastname" placeholder="Last Name*" value="<?php echo set_value('lastname'); ?>">
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" id="exampleInputEmail1" name="address" placeholder="Address" value="<?php echo set_value('address'); ?>">
