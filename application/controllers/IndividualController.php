@@ -64,10 +64,18 @@ class IndividualController extends CI_Controller {
 			$donordata = array(  
 				'timetype' => $info['timeframe'],	
 				'bankaccount' => $info['iban'],
+				'salutation' => $info['salutation'],
 				'firstname' => $info['firstname'],
+				'inserstion' => $info['insertion'],
 				'lastname' => $info['lastname'],
+				'birthdate' => $info['birthdate'],
+				'address' => $info['address'],
+				'zipcode' => $info['zipcode'],
+				'location' => $info['location'],
 				'email' => $info['email'],
-				'password' => $info['password']
+				'password' => $info['password'],
+				'referral_method' => $info['referral_method'],
+				'gift' => $info['gift'],
 			);
 
 			$donationdata = array(
@@ -81,7 +89,6 @@ class IndividualController extends CI_Controller {
 
 			$reg['success'] = "Congratulations " . $donordata['firstname'] . ", your donation has been registered successfully!";
 			$this->load->view('register_individual', $reg); # adjust the view
-
 		}
 	}
 

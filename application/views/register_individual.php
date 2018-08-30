@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    </label>
 
 		    <div class="form-group">
-			    <input type="iban" class="form-control" id="iban" name="iban" aria-describedby="iban" placeholder="IBAN *">
+			    <input type="iban" class="form-control" id="iban" name="iban" aria-describedby="iban" placeholder="IBAN *" value='<?php echo set_value('iban')?>'>
 		  </div>
 		</div> 
 
@@ -105,31 +105,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    <p><strong>You can pay safe and easy through:</strong></p>
 		    <div class="form-check">
 		      <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="paymentmethod" id="ideal" value="ideal">
+		        <input type="radio" class="form-check-input" name="paymentmethod" id="ideal" value="ideal" <?php if (isset($_POST['paymentmethod']) && $_POST['paymentmethod']=="ideal") echo "checked";?>>
 		        iDeal
 		      </label>
 		    </div>
 		    <div class="form-check">
 		    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="paymentmethod" id="creditcard" value="creditcard">
+		        <input type="radio" class="form-check-input" name="paymentmethod" id="creditcard" value="creditcard" <?php if (isset($_POST['paymentmethod']) && $_POST['paymentmethod']=="creditcard") echo "checked";?>>
 		        Credit Card
 		      </label>
 		    </div>
 		    <div class="form-check">
 		    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="paymentmethod" id="bancontact" value="bancontact">
+		        <input type="radio" class="form-check-input" name="paymentmethod" id="bancontact" value="bancontact" <?php if (isset($_POST['paymentmethod']) && $_POST['paymentmethod']=="bancontact") echo "checked";?>>
 		        Bancontact
 		      </label>
 		    </div>
 		    <div class="form-check">
 		    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="paymentmethod" id="paypal" value="paypal">
+		        <input type="radio" class="form-check-input" name="paymentmethod" id="paypal" value="paypal" <?php if (isset($_POST['paymentmethod']) && $_POST['paymentmethod']=="paypal") echo "checked";?>>
 		        PayPal
 		      </label>
 		    </div>
 		    <div class="form-check">
 		    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="paymentmethod" id="sofort" value="sofort">
+		        <input type="radio" class="form-check-input" name="paymentmethod" id="sofort" value="sofort" <?php if (isset($_POST['paymentmethod']) && $_POST['paymentmethod']=="sofort") echo "checked";?>>
 		        SOFORT
 		      </label>
 		    </div>
@@ -143,45 +143,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    	<p><strong>Salutation:</strong></p>
 		    <div class="form-check">
 	     		<label class="form-check-label">
-	        	<input type="radio" class="form-check-input" name="salutation" id="male" value="male">
+	        	<input type="radio" class="form-check-input" name="salutation" id="male" value="male" <?php if (isset($_POST['salutation']) && $_POST['salutation']=="male") echo "checked";?>>
 	        	Mr.
 	      		</label>
 	    	</div>
 		    <div class="form-check">
 			    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="salutation" id="female" value="female">
+		        <input type="radio" class="form-check-input" name="salutation" id="female" value="female" <?php if (isset($_POST['salutation']) && $_POST['salutation']=="female") echo "checked";?>>
 	        	Mrs.
 	      		</label>
 	    	</div>
 	    </fieldset>
 		
 		<div class="form-group">
-		    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name*">
+		    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name*" value='<?php echo set_value('firstname')?>'>
 		</div>
 		<div class="form-group">
-		    <input type="text" class="form-control" id="insertion" name="insertion" placeholder="Insertion">
+		    <input type="text" class="form-control" id="insertion" name="insertion" placeholder="Insertion" value='<?php echo set_value('insertion')?>'>
 		</div>
 		<div class="form-group">
-		    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Surname*">
+		    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Surname*" value='<?php echo set_value('lastname')?>'>
 		</div>		
 
 		<label for="DOB">Date of birth:</label> <br>
-			<input type="date">
+			<input type="date" name="birthdate" value='<?php echo set_value('birthdate')?>'> 
 		
 		<br>
 		<br>
 
 		<div class="form-group">
-		    <input type="text" class="form-control" id="street" name="street" placeholder="Street + Number">
+		    <input type="text" class="form-control" id="street" name="street" placeholder="Street + Number" value='<?php echo set_value('street')?>'>
 		</div>
 		<div class="form-group">
-		    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Postal/ZIP code">
+		    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Postal/ZIP code" value='<?php echo set_value('zipcode')?>'>
 		</div>
 		<div class="form-group">
-		    <input type="text" class="form-control" id="location" name="location" placeholder="Location">
+		    <input type="text" class="form-control" id="location" name="location" placeholder="Location" value='<?php echo set_value('location')?>'>
 		</div>
 		<div class="form-group">
-		    <input type="email" class="form-control" id="email" name="email" placeholder="Email address*">
+		    <input type="email" class="form-control" id="email" name="email" placeholder="Email address*" value='<?php echo set_value('email')?>'>
 		</div>
 		<div class="form-group">
 		    <input type="password" class="form-control" id="password" name="password" placeholder="Password*">
@@ -191,7 +191,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 		<div class="form-group">
-    		<textarea class="form-control" id="referral" rows="4" placeholder="How did you find us?"></textarea>
+			<label for="referral_method">How did you find us?</label> <br>
+    		<input type="text" class="form-control" id="referral_method" name="referral_method" value='<?php echo set_value('referral_method')?>'>
   		</div>
 
   		<fieldset class="form-group">
@@ -199,19 +200,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    <p><strong>Did you choose for a periodically donation, then please choose your gift:</strong></p>
 		    <div class="form-check">
 		      <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="gift" id="toucan" value="toucan">
+		        <input type="radio" class="form-check-input" name="gift" id="toucan" value="toucan" <?php if (isset($_POST['gift']) && $_POST['gift']=="toucan") echo "checked";?>>
 		        Wonderful high resolution PDF of a watercolor painting (Toucan)
 		      </label>
 		    </div>
 		    <div class="form-check">
 		    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="gift" id="jaguar" value="jaguar">
+		        <input type="radio" class="form-check-input" name="gift" id="jaguar" value="jaguar" <?php if (isset($_POST['gift']) && $_POST['gift']=="jaguar") echo "checked";?>>
 		        Wonderful high resolution PDF of a watercolor painting (Jaguar)
 		      </label>
 		    </div>
 		    <div class="form-check">
 		    <label class="form-check-label">
-		        <input type="radio" class="form-check-input" name="gift" id="jaguar" value="jaguar">
+		        <input type="radio" class="form-check-input" name="gift" id="nogift" value="nogift" <?php if (isset($_POST['gift']) && $_POST['gift']=="nogift") echo "checked";?>>
 		        No, thanks
 		      </label>
 		    </div>

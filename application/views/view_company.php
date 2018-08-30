@@ -32,45 +32,45 @@
         
             <form action="/addCompany" method ="POST">
                 <div class="form-group">
-                        <input type="text" class="form-control" name="company_name" placeholder="Company Name*">
+                    <input type="text" class="form-control" name="company_name" placeholder="Company Name*" value="<?php echo set_value('firstname'); ?>">
                 </div>
                 <h3> Company Representative's details</h3>
                     <div class="form-group"> 
-                            <input type="text" class="form-control" id="exampleInputEmail1" name="firstname" placeholder="First Name*">
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="firstname" placeholder="First Name*" value="<?php echo set_value('firstname'); ?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="lastname" placeholder="Last Name*">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="lastname" placeholder="Last Name*" value="<?php echo set_value('lastname'); ?>>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="address" placeholder="Address">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="address" placeholder="Address" value="<?php echo set_value('address'); ?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="zipcode" placeholder="Zip Code">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="zipcode" placeholder="Zip Code" value="<?php echo set_value('zipcode'); ?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="location" placeholder="Location">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="location" placeholder="Location" value="<?php echo set_value('location'); ?>">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email*">
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email*" value="<?php echo set_value('email'); ?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="phone" placeholder="Phone Number*">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="phone" placeholder="Phone Number*" value="<?php echo set_value('phone'); ?>">
                     </div>   
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="timetype" id="exampleRadios1" value="once" checked>
+                        <input class="form-check-input" type="radio" name="timetype" id="exampleRadios1" value="once" <?php if (isset($_POST['timetype']) && $_POST['timetype']=="once") echo "checked";?> >
                         <label class="form-check-label" for="exampleRadios1">
                             We want to donate one time
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="timetype" id="exampleRadios2" value="periodically">
+                        <input class="form-check-input" type="radio" name="timetype" id="exampleRadios2" value="periodically" <?php if (isset($_POST['timetype']) && $_POST['timetype']=="periodically") echo "checked";?> >
                         <label class="form-check-label" for="exampleRadios2">
                             We want to donate periodically
                         </label>
                     </div>        
                     <div class="form-group">
                         <label for="exampleFormControlTextarea2">How did you find us?</label>
-                        <textarea class="form-control rounded-0" name="referral_method" id="exampleFormControlTextarea2" rows="3"></textarea>
+                        <input type="text" class="form-control rounded-0" name="referral_method" id="exampleFormControlTextarea2" value="<?php echo set_value('referral_method'); ?>">
                     </div>
                     
                     <div class="form-check">
