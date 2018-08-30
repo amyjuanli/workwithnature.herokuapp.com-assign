@@ -12,6 +12,7 @@ body {
     color: white;
 }
 
+
 .left {
     background-color: #f8f8ff;
     float: left;
@@ -67,6 +68,6 @@ body {
 }
 
 /* show list of donations */
-table > tr {
-    
+#donations-table {
+    width: 100%;
 }

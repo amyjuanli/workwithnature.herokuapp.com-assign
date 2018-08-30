@@ -100,20 +100,20 @@ if (!empty($donations)) {
 				</div>		
             </form>
       
-       <?php foreach($donations as $donation) ?>
-      
-            <table class="container-fluid">
-                
-                <tr>
-                    <td>1</td>
-                    <td>10.398671</td>
-                    <td>-84.170756</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>10.398671</td>
-                    <td>-84.170756</td>
-                </tr>
+            <table class="container-fluid table" id="donations-table">
+                <?php 
+                foreach ($donations as $donation) {
+                    echo "<a href='/donation'>";
+                    echo "<form action='/donation.php method='post'";
+                    echo "<tr>";
+                    echo "<td>" . "<input type='text' style='color: #43c86a; border:none;' name='donation_id' value=" . $donation['id'] . "></td>";
+                    echo "<td>" . "<input type='text' style='color: #43c86a;' name='latitude' value=" . $donation['latitude'] . "></td>";
+                    echo "<td>" . "<input type='text' style='color: #43c86a;' name='longitude' value=" . $donation['longitude'] . "></td>";
+                    echo "</tr>";
+                    echo "</form>";
+                    echo "</a>";
+                }
+                ?>
             </table>
             
 			<br>
