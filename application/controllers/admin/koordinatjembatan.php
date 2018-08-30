@@ -52,8 +52,9 @@ class Koordinatjembatan extends CI_Controller{
     function storeCoordsByDonor() {
         $postData = $this->input->post(null, true);
         $donor_id = $this->session->userdata('donor')['id'];
+        $latest_donation_id = $this->session->userdata('latest_donation_id')['id'];
         // var_dump($donor_id); die();
-        $this->common_model->addLatLng($postData['latitude'], $postData['longitude'], $donor_id);
+        $this->common_model->addLatLng($postData['latitude'], $postData['longitude'], $donor_id, $latest_donation_id);
         redirect('/maploader');
     }
 

@@ -92,12 +92,17 @@ class IndividualController extends CI_Controller {
 			// get donor id
 			$this->load->model('donationmodel');
 			$donor = $this->donationmodel->getUserByEmail($info['email']);
-			// var_dump($donor_id); die();
+			
+			// get current donation id for the donor 
+			$latest_donation_id = $this->donationmodel->getLatestDonationId();
+
+			// var_dump($latest_donation_id); die();
 			$this->session->set_userdata('donor', $donor);
+			$this->session->set_userdata('latest_donation_id', $latest_donation_id);
 
 
 			$reg['success'] = "Congratulations " . $donordata['firstname'] . ", your donation has been registered successfully!";
-			$this->load->view('register_individual', $reg); # adjust the view
+			$this->load->view('register_individual', $reg);
 		}
 	}
 

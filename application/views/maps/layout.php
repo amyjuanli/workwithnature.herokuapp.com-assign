@@ -28,6 +28,12 @@
         line-height: 2em;
         font-weight: bold;
     }
+
+    p {
+        color: white;
+        line-height: 2em;
+        
+    }
     </style>
 </head>
 <body>

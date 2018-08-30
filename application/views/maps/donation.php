@@ -44,44 +44,29 @@ if (!empty($donation)) {
         
     }
 
-  // add a rectangle on click 
- function addLating(event) {
-          var lat = event.latLng.lat();
-          var lng = event.latLng.lng();
-          console.log("lat: " + lat + ", long: " + lng);
-          var rectangle = new google.maps.Rectangle({
-            strokeColor: '#00FF00',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#00FF00',
-            fillOpacity: 0.35,
-            map: map,
-            bounds: {
-              north: lat + .001,
-              south: lat - .001,
-              east: lng + .001,
-              west: lng - .001
-            }
-        });
-    }
 
 </script>
 
 
 <!-- Image carrousel -->
-<div class ="container-fluid">
-        <div class="col-md-8 col-sm-8">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div  style="height:600px;" id="map_canvas"></div>
-                </div>
-            </div>
-            <a href="/show">Go Back!</a>
+<!-- <div class ="container-fluid"> -->
+        <div class="left" style="width: 60%; float:left">
+            <!-- <div class="panel panel-default"> -->
+                <!-- <div class="panel-body"> -->
+                    <div id="map_canvas"></div>
+                <!-- </div> -->
+            <!-- </div> -->
+         
         </div>
 
-        <div class="col-md-4 col-sm-4">
-            <div class="row">
-                <div id="myCarousel" style="height: 500px;" class="carousel slide" data-ride="carousel">
+        <div class="donation" style="width: 40%; float:left">
+        
+        
+            <div class="images" style="height: 400px" >
+            <!-- <div class="row"> -->
+                <div class="col-md-offset-1 col-md-10">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -91,54 +76,62 @@ if (!empty($donation)) {
                     <li data-target="#myCarousel" data-slide-to="4"></li>
                     </ol>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                <div class="item active">
-                    <img src="https://azfhakami.azureedge.net/~/media/17_images/late-availability/sherwood-forest-golden-oak.ashx?h=200&la=en&w=380" alt="Los Angeles" style="width:100%; height:  400px;">
-                </div>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active" style="width:100%; height:  400px;">
+                            <img src="https://i.imgur.com/53EcQEO.jpg" alt="Black Bird" style="width:100%; height:  400px;">
+                        </div>
+                        <div class="item" style="width:100%; height:  400px;">
+                            <img src="https://i.imgur.com/MhzCiPU.jpg" alt="Toucan" style="width:100%; height:  400px;">
+                        </div>
+                        <div class="item" style="width:100%; height:  400px;">
+                            <img src="https://i.imgur.com/oM8VBG1.jpg" alt="Raccoons" style="width:100%; height:  400px;">
+                        </div>
+                        <div class="item" style="width:100%; height:  400px;">
+                            <img src="https://i.imgur.com/0yudIe3.jpg" alt="Toucan" style="width:100%; height:  400px;">
+                        </div>
+                        <div class="item" style="width:100%; height:  400px;">
+                            <img src="https://i.imgur.com/E8erAJ2.jpg" alt="Monkeys" style="width:100%; height:  400px;">
+                        </div>
+                    </div> <!-- closing div tag for carousel-inner-->
 
-                <div class="item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS93Y0FosA2ZBZT4NY98PbAI2-_7-omQj3Y0yaKL1T5BiIanUwhDg" alt="Chicago" style="width:100%; height:  400px;">
-                </div>
-                
-                <div class="item">
-                    <img src="https://foresteurope.org/wp-content/uploads/2016/09/103055DSC0172ssw2-1024x685.jpg" alt="New york" style="width:100%; height:  400px;">
-                </div>
-                <div class="item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDhjlZhVJvg49blCd-WvSt0TQ4587JBxQ1poBLkyaGDjJf6wLf" alt="New york" style="width:100%; height:  400px;">
-                </div>
-                    <div class="item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDhjlZhVJvg49blCd-WvSt0TQ4587JBxQ1poBLkyaGDjJf6wLf" alt="New york" style="width:100%; height:  400px;">
-                </div>
-                </div> <!-- closing div tag for carousel-inner-->
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" style="height: 400px; width: 50px;" href="#myCarousel" data-slide="prev" role="button">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
 
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
+                    <a class="right carousel-control" style="height: 400px; width: 50px;" href="#myCarousel" data-slide="next" role="button">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
 
-            </div>
-        </div>
+                </div> <!-- div id mycarousel  -->
+                <!--</div>  col md sm-->
+                <!--</div>  div row -->
+                </div><!-- end of div class images --> 
+                </div> <!-- div right -->
 
     <!-- donation -->
+    <br>
     <div class="row">
 
         
-        <?=$donation['latitude'] ?> / <?=$donation['longitude'] ?>
-        <p>PROTECTOR <br><?php
+        <?= "<h1 style='text-decoration: underline'>" . $donation['latitude'] ?> / <?=$donation['longitude'] . "</h1>" ?>
+        <h2>Protector</h2><h3><?php
         $donor =$this->session->userdata('donor');
         if(!empty($donor)) {
             echo $donor['firstname'] . ' ' . $donor['insertion'] . ' ' . $donor['lastname'];
         }
-        ?></p>
-        <p>SQUARE METERS<br><?=$donation['squaremeter']?></p>
-        <p>ADOPTED A TOTAL OF <br><?=$donations['total'] ?>m<span style="text-transform: uppercase;">2</span></p>
+        ?></h3><hr>
+        <h2>Square meters</h2><h3><?=$donation['squaremeter']?> <span>&nbsp;m<sup>2</sup></span></h3>
+        <hr>
+        <h2>Adopted a total of </h2><h3><?=$donations['total'] ?>&nbsp;m<sup>2</sup></h3>
     </div>
+<br>
+<br>
+<br>
+       <a href="/show" style="font-size: 25px">Go Back!</a>
 </div>
 
 

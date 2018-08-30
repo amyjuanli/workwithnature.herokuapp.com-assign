@@ -39,7 +39,7 @@
 
 			<hr>
 
-			<form action="individualcontroller/register" method="POST">
+			<form action="individualcontroller/donate_now" method="POST">
  				<div class="form-group">
 				    <input type="submit" class="registration form-control" id="formGroupExampleInput" value="Adopt a square meter for only €2,50">
 			  	</div>

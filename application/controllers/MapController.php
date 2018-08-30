@@ -41,6 +41,7 @@ class MapController extends CI_Controller {
 	public function donation($id) // show the detail of one donation
 	{ 
 		$donor_id = $this->session->userdata('donor')['id'];
+		// var_dump($donor_id); die();
 		$this->load->view('maps/donation.php', [
 			'donation' =>$this->load()->getDonation($id),
 			'donations' =>$this->load()->totalDonationsByDonor($donor_id),

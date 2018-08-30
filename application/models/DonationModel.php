@@ -22,5 +22,10 @@ class DonationModel extends CI_Model {
        $sql = 'SELECT id, latitude, longitude, squaremeter FROM donations WHERE id = ?;';
        return $this->db->query($sql, [$id])->row_array();
    }
+   public function getLatestDonationId() 
+   {
+       $sql = 'SELECT  * FROM donations ORDER BY id DESC LIMIT 1';
+       return $this->db->query($sql)->row_array();
+   }
 
 }

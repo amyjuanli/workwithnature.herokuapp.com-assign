@@ -1,37 +1,41 @@
-<div class ="container-fluid">
-    <div class="row">
-        <div class="col-md-8 col-sm-8">
-            <div class="panel panel-default">
+
+<!-- <div class ="container-fluid"> -->
+    <!-- <div class="row"> -->
+        <!-- <div class="col-md-8 col-sm-8"> -->
+            <!-- <div class="panel panel-default">
             
-                <div class="panel-body">
-                    <div  style="height:600px;" id="map-canvas"></div>
+                <div class="panel-body"> -->
+                  <div class="left" style="width: 60%; float: left;">
+                    <div  style="height:100vh" id="map-canvas"></div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-4">
-            <div class="panel panel-default">
+            <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-md-4 col-sm-4"> -->
+            <!-- <div class="panel panel-default"> -->
               
-                <div class="panel-body">
+                <!-- <div class="panel-body"> -->
+                    <div class="right" style="width: 40%; float: left; padding-left: 10%">
                     <form action="admin/koordinatjembatan/storeCoordsByDonor" method="post">
-                        <div class="row">
-                              <div class="col-md-6 col-sm-6">
+                        <!-- <div class="row"> -->
+                              <div class="col-md-7 col-sm-6">
                                     <div class="form-group">
-                                        <label for="latitude">Latitude</label>
+                                        <label for="latitude"><h2>Latitude</h2></label>
                                         <input type="text" class="form-control" id="latitude" name="latitude" placeholder="">
                                   </div>
-                              </div>
+                              <!-- </div> -->
+
+                              <br>
                             
-                              <div class="col-md-6 col-sm-6">
+                              <!-- <div class="col-md-5 col-sm-6"> -->
                                     <div class="form-group">
-                                        <label for="longitude">Longitude</label>
+                                        <label for="longitude"><h2>Longitude</h2></label>
                                         <input type="text" class="form-control" id="longitude" name="longitude" placeholder="">
                                   </div>
-                              </div>
+                              <!-- </div> -->
                               
-                                    
+                                    <br>
                                   <div class="form-group">
-                                        
-                                      <button class="btn btn-primary" id="simpan" name="simpan">Select</button>
+                                      <button class="btn btn-primary btn-lg" id="simpan" name="simpan">Select</button>
                                   </div>
                         </div>
                     </form>

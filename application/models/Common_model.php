@@ -12,14 +12,26 @@ class Common_model extends CI_Model{
     //     $query = $this->db->insert('donations', $coordinates);
     //     return $query;
     // }
-    public function addLatLng($latitude, $longitude, $donorId){      
+    public function addLatLng($latitude, $longitude, $donorId, $latestdonationId){      
         $coordinates = array(
           'latitude'=>$latitude,
           'longitude'=>$longitude,
-          'donor_id' => $donorId
+          'donor_id' => $donorId,
+          'id' => $latestdonationId
         );
-        $query = $this->db->insert('donations', $coordinates);
-        return $query;
+
+        // $query = $this->db->insert('donations', $coordinates); 
+        // $sql = "UPDATE donations SET latitude= $coordinates['latitude'], longitude = $coordinates['longitude'];";
+        // $this->db->set('id', $coordinates['id']);
+        $this->db->set('latitude', $coordinates['latitude']);
+        $this->db->set('longitude', $coordinates['longitude']);
+        $this->db->set('donor_id', $coordinates['donor_id']);
+        $this->db->where('id', $coordinates['id']);
+$this->db->update('donations');
+        // $this->db->insert('donations');
+         
+        // $query = $this->db->replace('donations', $coordinates);
+        // return $query;
     }
     
     
