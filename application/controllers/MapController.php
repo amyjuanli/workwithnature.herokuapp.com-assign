@@ -7,8 +7,8 @@ class MapController extends CI_Controller {
 	    $this->load->model('donationmodel');
 	    return $this->donationmodel;
 	}
-	public function index()
-	{
+	public function maploader() {
+	
         $this->load->view('maps/index.php');
 	}
 	
@@ -18,6 +18,9 @@ class MapController extends CI_Controller {
 		$donorData = $this->load()->getUserByEmail($postData['email']);
 		$donations = $this->load()->getAllByDonorID($donorData['id']);
 		$this->session->set_userdata('donor', $donorData);
+// set session data for the donor by the input email 
+$this->session->set_userdata('emailDonor', $donorData);
+
 
 		$this->load->view('maps/show.php', [
 			'donations' =>$donations,

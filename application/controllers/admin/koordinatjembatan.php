@@ -45,10 +45,18 @@ class Koordinatjembatan extends CI_Controller{
              
     }
     // store the coords to database 
-    function storeCoords() {
+    // function storeCoords() {
+    //     $postData = $this->input->post(null, true);
+    //     $this->common_model->formkoordinatjembatan($postData['latitude'], $postData['longitude']);
+    // }
+    function storeCoordsByDonor() {
         $postData = $this->input->post(null, true);
-        $this->common_model->formkoordinatjembatan($postData['latitude'], $postData['longitude']);
+        $donor_id = $this->session->userdata('donor')['id'];
+        // var_dump($donor_id); die();
+        $this->common_model->addLatLng($postData['latitude'], $postData['longitude'], $donor_id);
+        redirect('/maploader');
     }
+
 }
 
 

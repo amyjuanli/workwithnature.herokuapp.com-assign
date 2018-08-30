@@ -29,9 +29,6 @@
 				<div class="sizing form-group">
 				    <input type="text" class="form-control" id="email" name="email" placeholder="Your Email*">
 				</div>
-				<div class="sizing form-group">
-				    <input type="text" class="form-control" id=password name="password" placeholder="Your Password*">
-				</div>
 				<div class="find">
 					<input class="button form-control" type="submit" name="find" value="Find">
 				</div>		

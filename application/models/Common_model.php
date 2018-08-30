@@ -4,14 +4,24 @@
 class Common_model extends CI_Model{
      
      
-    public function addLatLng($latitude, $longitude){      
+    // public function addLatLng($latitude, $longitude){      
+    //     $coordinates = array(
+    //       'latitude'=>$latitude,
+    //       'longitude'=>$longitude
+    //     );
+    //     $query = $this->db->insert('donations', $coordinates);
+    //     return $query;
+    // }
+    public function addLatLng($latitude, $longitude, $donorId){      
         $coordinates = array(
           'latitude'=>$latitude,
-          'longitude'=>$longitude
+          'longitude'=>$longitude,
+          'donor_id' => $donorId
         );
         $query = $this->db->insert('donations', $coordinates);
         return $query;
     }
+    
     
      public function getAll(){
         $this->db->select('*');

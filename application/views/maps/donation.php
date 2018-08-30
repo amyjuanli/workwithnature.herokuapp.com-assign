@@ -76,6 +76,7 @@ if (!empty($donation)) {
                     <div  style="height:600px;" id="map_canvas"></div>
                 </div>
             </div>
+            <a href="/show">Go Back!</a>
         </div>
 
         <div class="col-md-4 col-sm-4">

@@ -81,7 +81,8 @@ if (!empty($donations)) {
 	</div>
 	<div class="right">
 		<div class="container-fluid">
-			<h1>Hello <?= $donor['firstname'] . ' ' . $donor['insertion'] . ' ' . $donor['lastname'] ?></h1>
+		
+                <h1>Hello <?=$this->session->userdata('emailDonor')['firstname'] ?></h1>
 			<p class="lead">These are your pieces of adopted rainforest. Take a look:</p>
             <form action="/show" method="POST">
 				<div class="sizing form-group">
@@ -106,7 +107,8 @@ if (!empty($donations)) {
 			<br>
 			<br>
 
-			<hr>
+            <hr>
+            <a href="https://work-with-nature.com/nl/">Take me to the Work With Nature homepage</a>
 		</div> <!-- end div class="container-fluid" -->
 
 

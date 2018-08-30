@@ -32,7 +32,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<?php
 			if (isset($success)) {
+				echo '<div class="alert alert-success" role="alert">'; 
 				echo "<p>" . $success . "</p>";	
+				echo "<a href='/assign'>Click here to select your own part of adopted forest!</a>";
+				echo '</div>';
 			}
 		?>
 
@@ -65,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		       	</div>
 				<div class="form-check">
 		           <input class="form-check-input" type="radio" name="squaremeter">
-		           <label class="form-check-label">la
+		           <label class="form-check-label">
 		              Otherwise, namely (m2): <input type="text" name="sqm" placeholder="m2">
 		           </label>
 		       	</div> 

@@ -2,9 +2,7 @@
     <div class="row">
         <div class="col-md-8 col-sm-8">
             <div class="panel panel-default">
-               <div class="panel-heading">
-                   <h3 class="panel-title"><span class="glyphicon glypicon-globe"></span>Peta</h3>
-                </div>
+            
                 <div class="panel-body">
                     <div  style="height:600px;" id="map-canvas"></div>
                 </div>
@@ -12,11 +10,9 @@
         </div>
         <div class="col-md-4 col-sm-4">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><span class="glyphicon glypicon-globe"></span>Form Marker</h3>
-                </div>
+              
                 <div class="panel-body">
-                    <form action="CoordinateController/addCoords" method="post">
+                    <form action="admin/koordinatjembatan/storeCoordsByDonor" method="post">
                         <div class="row">
                               <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
@@ -32,14 +28,10 @@
                                   </div>
                               </div>
                               
-                                    <div class="form-group">
-                                        <label for="jembatan_id">User Name </label><br>
-                                        <input type="text" name="name" value="Name">
-                                        
-                                  </div>
+                                    
                                   <div class="form-group">
                                         
-                                      <button class="btn btn-primary" id="simpan" name="simpan">Send</button>
+                                      <button class="btn btn-primary" id="simpan" name="simpan">Select</button>
                                   </div>
                         </div>
                     </form>
@@ -84,10 +76,10 @@
             fillOpacity: 0.35,
             map: map,
             bounds: {
-              north: lat + .0000001,
-              south: lat - .0000001,
-              east: lng + .0000001,
-              west: lng - .0000001
+              north: lat + .001,
+              south: lat - .001,
+              east: lng + .001,
+              west: lng - .001
             }
         });
     }

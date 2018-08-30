@@ -14,22 +14,22 @@ class IndividualController extends CI_Controller {
 	}
 
 	# this function is for testing purposes only
-	public function logged_in()
-	{
-		$this->load->view('login');
-	}
+	// public function logged_in()
+	// {
+	// 	$this->load->view('login');
+	// }
 
-	# this function is for testing purposes only
-	public function social()
-	{
-		$this->load->view('sharesocial');
-	}
+	// # this function is for testing purposes only
+	// public function social()
+	// {
+	// 	$this->load->view('sharesocial');
+	// }
 
-	# this function is for testing purposes only
-	public function donatemore()
-	{
-		$this->load->view('donatemore');
-	}
+	// # this function is for testing purposes only
+	// public function donatemore()
+	// {
+	// 	$this->load->view('donatemore');
+	// }
 
 	# registration form  validation
 	public function donate_now()
@@ -55,11 +55,6 @@ class IndividualController extends CI_Controller {
 		} else {
 			$info = $this->input->post(NULL, TRUE);
 			
-			// echo '<pre>';
-			// var_dump($info);
-			// echo '</pre>';
-			// die();
-			 
 			$info['password'] = $this->encryption->encrypt($info['password']);
 
 			$donordata = array(  
@@ -89,22 +84,22 @@ class IndividualController extends CI_Controller {
 				);
 			}
 			
-			// $donationdata = array(
-			// 	'squaremeter' => $info['squaremeter']
-			// 	'squaremeter' => $info['sqm']
-			// 	# also insert the donor id here, which is auto-incremented from table donors
-			// );
-
 			$this->load->model('individual');
 			$this->individual->add_donor($donordata);
+		
 			$this->individual->add_donation($donationdata);
+
+			// get donor id
+			$this->load->model('donationmodel');
+			$donor = $this->donationmodel->getUserByEmail($info['email']);
+			// var_dump($donor_id); die();
+			$this->session->set_userdata('donor', $donor);
+
 
 			$reg['success'] = "Congratulations " . $donordata['firstname'] . ", your donation has been registered successfully!";
 			$this->load->view('register_individual', $reg); # adjust the view
 		}
 	}
 
-	public function login() {
-		#VALIDATE THE EMAIL AND PASSWORD
-	}
+
 }

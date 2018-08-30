@@ -13,6 +13,11 @@ class Individual extends CI_Model
 	{
 		$this->db->insert('donations', $arg);
 	}
+	public function getDonorId() 
+	{
+		$sql = 'SELECT * FROM donors ORDER BY id DESC LIMIT 1';
+		$this->db->query($sql);
+	}
 }
 
 
