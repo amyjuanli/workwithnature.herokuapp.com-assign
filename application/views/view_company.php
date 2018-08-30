@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         
-            <form action="companycontroller/addCompany" method ="POST">
+            <form action="/companycontroller/addCompany" method ="POST">
                 <div class="form-group">
                     <input type="text" class="form-control" name="company_name" placeholder="Company Name*" value="<?php echo set_value('firstname'); ?>">
                 </div>

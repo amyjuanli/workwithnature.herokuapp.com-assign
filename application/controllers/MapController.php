@@ -14,19 +14,29 @@ class MapController extends CI_Controller {
 	
 	public function show() // show all donations
 	{ 
+
 		$postData = $this->input->post(NULL, true);
-		$donorData = $this->load()->getUserByEmail($postData['email']);
+		// var_dump($postData); die();
+		if(!empty($postData)) {
+			$donorData = $this->load()->getUserByEmail($postData['email']);
 		$donations = $this->load()->getAllByDonorID($donorData['id']);
 		$this->session->set_userdata('donor', $donorData);
-// set session data for the donor by the input email 
-$this->session->set_userdata('emailDonor', $donorData);
+		$this->session->set_userdata('donations', $donations);
+			// set session data for the donor by the input email 
+	$this->session->set_userdata('emailDonor', $donorData);
+	$this->load->view('maps/show.php', [
+		'donations' =>$donations,
+		'donor' => $donorData
+		]
+	);
+		} else {
+			$this->load->view('maps/show.php');
+		}
+		
 
 
-		$this->load->view('maps/show.php', [
-			'donations' =>$donations,
-			'donor' => $donorData
-			]
-		);
+
+	
 	}
 	public function donation($id) // show the detail of one donation
 	{ 

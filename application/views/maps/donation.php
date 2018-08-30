@@ -17,7 +17,7 @@ if (!empty($donation)) {
 
         var point = new google.maps.LatLng(10.398671, -84.170756); 
         var myOptions = {
-                zoom: 14,
+                zoom: 8,
               center: point,
               mapTypeId: 'satellite'
         };
@@ -35,10 +35,10 @@ if (!empty($donation)) {
             fillOpacity: 0.35,
             map: map,
             bounds: {
-              north: lat + .001,
-              south: lat - .001,
-              east: lng + .001,
-              west: lng - .001
+              north: lat + .1,
+              south: lat - .1,
+              east: lng + .1,
+              west: lng - .1
             }
         }); 
         

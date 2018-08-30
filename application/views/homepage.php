@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         
         
-        <form action="individualcontroller/logged_in" method="POST">
+        <form action="/maploader" method="POST">
             <input class="button" type="submit" value="View my forest" name="viewforest">
         </form>
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="main.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     <br>
     
     <div class="jumbotron text-xs-center container">
-    <h1 class="display-3">Thank you for your company's interest in adopting rainforest!</h1>
+    <h1 class="display-3" style="color: #43c86a">Thank you for your company's interest in adopting rainforest!</h1>
     <p class="lead"><strong>We will contact you within 5 working days</strong> for further details.</p>
     <hr>
     <p>

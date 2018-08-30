@@ -20,21 +20,19 @@
      .carousel-inner img {
       width: 100%;
       height: 100%;
-  }
+    }
+
+    .coordstyling {
+        font-size: 24px;
+        color: #006400;
+        line-height: 2em;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
 
 <?= $content; ?>
-
-<hr/>
-<div class="container">
-    <div class="row">
-        <footer>
-            <p>&copy; 2018 WorkWithNature, Inc.</p>
-        </footer>
-    </div>
-</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

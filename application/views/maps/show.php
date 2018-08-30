@@ -12,15 +12,13 @@ if (!empty($donations)) {
   console.log(donations[0]);
 </script>
 
-
-
 <script type="text/javascript">
     function initialize() {
         spherical = google.maps.geometry.spherical;
 
         var point = new google.maps.LatLng(10.398671, -84.170756); 
         var myOptions = {
-                zoom: 14,
+                zoom: 8,
               center: point,
               mapTypeId: 'satellite'
         };
@@ -39,10 +37,10 @@ if (!empty($donations)) {
             fillOpacity: 0.35,
             map: map,
             bounds: {
-              north: lat + .001,
-              south: lat - .001,
-              east: lng + .001,
-              west: lng - .001
+              north: lat + .1,
+              south: lat - .1,
+              east: lng + .1,
+              west: lng - .1
             }
         }); 
         }
@@ -69,22 +67,48 @@ if (!empty($donations)) {
         });
     }
 
-     
-
     
 </script>
 
-<div class="left">
-		<div class="container-fluid">
+<div class="left" style="float: left; width: 60%">
+		<!-- <div class="container-fluid"> -->
 			<div id="map_canvas"></div>
-		</div>
+		<!-- </div> -->
 	</div>
-	<div class="right">
-		<div class="container-fluid">
+	<div class="right" style="float: left; width: 40%">
+		<!-- <div class="container-fluid"> -->
 		
-                <h1>Hello <?=$this->session->userdata('emailDonor')['firstname'] ?></h1>
+                <h1>Hello 
+                    <?php 
+                    $donor = $this->session->userdata('emailDonor');
+                    if(!empty($donor)) {
+                        echo $donor['firstname'] . ' ' . $donor['insertion']. ' ' . $donor['lastname'];
+                    } else {
+                        echo 'World';
+                    } ?>
+                   </h1>
 			<p class="lead">These are your pieces of adopted rainforest. Take a look:</p>
-            <form action="/show" method="POST">
+          <br>
+          
+                <?php 
+                $i = 1;
+                $donations = $this->session->userdata('donations');
+                if(!empty($donations)) {
+                    foreach ($donations as $donation) { ?>
+                        <a class="coordstyling" href="/donation/show/<?= $donation['id'] ?>">
+                          <?=$i . '.' ?>
+
+                            <?=$donation['latitude'] . ", " ?>
+                            <?=$donation['longitude'] ?>
+                            </a>
+                            <?php $i++; ?>
+                            <br>
+                <?php } ?>
+                <?php } ?>
+           
+                <br>
+                <br>
+                <form action="/show" method="POST">
 				<div class="sizing form-group">
 				    <input type="text" class="form-control" id="email" name="email" placeholder="Your Email*">
 				</div>
@@ -93,23 +117,13 @@ if (!empty($donations)) {
 				</div>		
             </form>
       
-                <?php 
-                $i = 1;
-                foreach ($donations as $donation) { ?>
-                        <a href="/donation/show/<?= $donation['id'] ?>">
-                          <?=$i ?>
-                            <?=$donation['latitude'] ?>
-                            <?=$donation['longitude'] ?>
-                            </a>
-                            <?php $i++; ?>
-                            <br>
-                <?php } ?>
+
 			<br>
 			<br>
 
             <hr>
             <a href="https://work-with-nature.com/nl/">Take me to the Work With Nature homepage</a>
-		</div> <!-- end div class="container-fluid" -->
+		<!-- </div>  end div class="container-fluid" -->
 
 
 	</div>

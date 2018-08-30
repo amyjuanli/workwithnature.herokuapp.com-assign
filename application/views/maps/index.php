@@ -15,12 +15,12 @@
 </script>
 
 
-<div class="left">
-		<div class="container-fluid">
+<div class="left" style="float: left; width: 60%">
+		<!-- <div class="container-fluid"> -->
 			<div id="map_canvas"></div>
-		</div>
+		<!-- </div> -->
 	</div>
-	<div class="right">
+	<div class="right" style="float: left; width: 40%">
 		<div class="container-fluid">
 			<h1>Take a look at your piece of rainforest</h1>
 			<p class="lead">Are you one of our heroes and adopted a square meter of Costa Rican rainforest? Fly to it and explore!</p>
@@ -49,7 +49,7 @@
 
 	</div>
 
-<button onclick="test();">Test</button>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDq3kPPoW_ZkOIUKaFHTWhgeZXwi-k_8rg&callback=initialize"></script>
 <script>
 <?php
