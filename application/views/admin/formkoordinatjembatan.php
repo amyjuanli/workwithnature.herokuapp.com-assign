@@ -5,8 +5,8 @@
             <!-- <div class="panel panel-default">
             
                 <div class="panel-body"> -->
-                  <div class="left" style="width: 60%; float: left;">
-                    <div  style="height:100vh" id="map-canvas"></div>
+                  <div class="left" style="float: left;">
+                    <div style="height:100vh" id="map-canvas"></div>
                 </div>
             <!-- </div> -->
         <!-- </div> -->
@@ -14,7 +14,7 @@
             <!-- <div class="panel panel-default"> -->
               
                 <!-- <div class="panel-body"> -->
-                    <div class="right" style="width: 40%; float: left; padding-left: 10%">
+                    <div class="right" style="float: left; padding-left: 10%">
                     <form action="admin/koordinatjembatan/storeCoordsByDonor" method="post">
                         <!-- <div class="row"> -->
                               <div class="col-md-7 col-sm-6">

@@ -50,7 +50,7 @@ if (!empty($donation)) {
 
 <!-- Image carrousel -->
 <!-- <div class ="container-fluid"> -->
-        <div class="left" style="width: 60%; float:left">
+        <div class="left" style="float:left">
             <!-- <div class="panel panel-default"> -->
                 <!-- <div class="panel-body"> -->
                     <div id="map_canvas"></div>
@@ -59,8 +59,10 @@ if (!empty($donation)) {
          
         </div>
 
-        <div class="donation" style="width: 40%; float:left">
-        
+        <div class="donation" style="float:left; padding-top: 50px;">
+        <!-- <a href="/show" style="font-size: 25px">Go Back!</a> -->
+        <br>
+        <br>
         
             <div class="images" style="height: 400px" >
             <!-- <div class="row"> -->

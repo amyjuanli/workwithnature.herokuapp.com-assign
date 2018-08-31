@@ -70,12 +70,12 @@ if (!empty($donations)) {
     
 </script>
 
-<div class="left" style="float: left; width: 60%">
+<div class="left" style="float: left;">
 		<!-- <div class="container-fluid"> -->
 			<div id="map_canvas"></div>
 		<!-- </div> -->
 	</div>
-	<div class="right" style="float: left; width: 40%">
+	<div class="right" style="float: left;">
 		<!-- <div class="container-fluid"> -->
 		
                 <h1>Hello 
