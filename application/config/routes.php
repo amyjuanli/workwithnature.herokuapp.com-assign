@@ -13,9 +13,9 @@ $route['donatemore'] = 'IndividualController/donatemore';
 
 $route['company'] = 'CompanyController/index';
 $route['addCompany'] = 'CompanyController/addCompany';
-$route['coordinate'] = 'CoordinateController';
+$route['assign'] = 'CoordinateController';
 $route['addcoords'] = 'CoordinateController/addCoords';
-$route['addcoords'] = 'admin/koordinatjembatan/storeCoordsByDonor';
+// $route['addcoords'] = 'admin/koordinatjembatan/storeCoordsByDonor';
 $route['show'] = 'MapController/show';
 $route['donation/show/(:num)'] = 'MapController/donation/$1';
 $route['map'] = 'MapController';
@@ -25,4 +25,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 // coordinates 
-$route['assign'] = 'admin/koordinatjembatan';
+// $route['assign'] = 'admin/koordinatjembatan';
