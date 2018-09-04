@@ -6,14 +6,14 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['register_individual'] = 'IndividualController/register_individual';
-$route['donate_now'] = 'individualcontroller/donate_now';
-$route['logged_in'] = 'individualcontroller/logged_in';
-$route['social'] = 'individualcontroller/social';
-$route['homepage2'] = 'individualcontroller/homepage2';
-$route['donatemore'] = 'individualcontroller/donatemore';
+$route['donate_now'] = 'IndividualController/donate_now';
+$route['logged_in'] = 'IndividualController/logged_in';
+$route['social'] = 'IndividualController/social';
+$route['homepage2'] = 'IndividualController/homepage2';
+$route['donatemore'] = 'IndividualController/donatemore';
 
-$route['company'] = 'companycontroller/index';
-$route['addCompany'] = 'companycontroller/addCompany';
+$route['company'] = 'CompanyController/index';
+$route['addCompany'] = 'CompanyController/addCompany';
 $route['coordinate'] = 'CoordinateController';
 $route['show'] = 'MapController/show';
 $route['donation/show/(:num)'] = 'MapController/donation/$1';
