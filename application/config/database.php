@@ -94,3 +94,5 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+//Add this to fetch the CLEARDB_DATABASE_URL
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
