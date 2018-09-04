@@ -10,26 +10,9 @@ class IndividualController extends CI_Controller {
 
 	public function register_individual()
 	{
+		die('form');
 		$this->load->view('register_individual');
 	}
-
-	# this function is for testing purposes only
-	// public function logged_in()
-	// {
-	// 	$this->load->view('login');
-	// }
-
-	// # this function is for testing purposes only
-	// public function social()
-	// {
-	// 	$this->load->view('sharesocial');
-	// }
-
-	// # this function is for testing purposes only
-	// public function donatemore()
-	// {
-	// 	$this->load->view('donatemore');
-	// }
 
 	# registration form  validation
 	public function donate_now()
