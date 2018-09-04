@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			if (isset($success)) {
 				echo '<div class="alert alert-success" role="alert">'; 
 				echo "<p>" . $success . "</p>";	
-				echo "<a href='/assign'>Click here to select your own part of adopted forest!</a>";
+				echo "<a href='/coordinate'>Click here to select your own part of adopted forest!</a>";
 				echo '</div>';
 			}
 		?>

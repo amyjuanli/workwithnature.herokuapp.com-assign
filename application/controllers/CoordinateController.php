@@ -44,6 +44,7 @@ class CoordinateController extends CI_Controller{
     function addCoords() {
         $postData = $this->input->post(null, true);
         $this->common_model->addLatLng($postData['latitude'], $postData['longitude']);
+        rediret('/coordinates');
     }
 }
 

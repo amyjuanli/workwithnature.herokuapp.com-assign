@@ -14,6 +14,7 @@ $route['donatemore'] = 'IndividualController/donatemore';
 $route['company'] = 'CompanyController/index';
 $route['addCompany'] = 'CompanyController/addCompany';
 $route['coordinate'] = 'CoordinateController';
+$route['addcoords'] = 'CoordinateController/addCoords';
 $route['storecoords'] = 'admin/koordinatjembatan/storeCoordsByDonor';
 $route['show'] = 'MapController/show';
 $route['donation/show/(:num)'] = 'MapController/donation/$1';
