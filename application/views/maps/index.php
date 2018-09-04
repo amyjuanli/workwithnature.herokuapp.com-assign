@@ -1,4 +1,15 @@
-
+<script type="text/javascript">
+    function initialize() {
+        var point = new google.maps.LatLng(10.398671, -84.170756); 
+        var myOptions = {
+                zoom: 10,
+              center: point,
+              mapTypeId: 'satellite'
+        };
+        map = new google.maps.Map(document.getElementById("map_canvas"),
+            myOptions);
+      }
+</script>
 
 <div class="left" style="float: left; ">
 		<!-- <div class="container-fluid"> -->
@@ -25,14 +36,7 @@
 			<br>
 
 			<hr>
-			  
-			<!-- <div class="donatenow">
-				<form action="individualcontroller/donate_now" method="POST">
-					<div class="form-group">
-						<button class="registration form-control responsive-width" id="formGroupExampleInput">Adopt a square meter for only €2,50</button>
-					</div>
-				</form>
-			</div> -->
+
 
 	  				<!-- <div class="donatenow"> -->
 						<a  class="btn button" role="button" href="/individualcontroller/donate_now">Adopt a square meter for only €2,50</a>
