@@ -43,8 +43,11 @@ class CoordinateController extends CI_Controller{
     // store the coords to database 
     function addCoords() {
         $postData = $this->input->post(null, true);
-        $this->common_model->addLatLng($postData['latitude'], $postData['longitude']);
-        rediret('/coordinates');
+        $donor_id = $this->session->userdata('donor')['id'];
+        $latest_donation_id = $this->session->userdata('latest_donation_id')['id'];
+        // var_dump($donor_id); die();
+        $this->common_model->addLatLng($postData['latitude'], $postData['longitude'], $donor_id, $latest_donation_id);
+        redirect('/maploader');
     }
 }
 
