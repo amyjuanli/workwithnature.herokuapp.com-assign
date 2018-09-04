@@ -1,18 +1,3 @@
-<!-- function code in js -->
-<script type="text/javascript">
-    function initialize() {
-        spherical = google.maps.geometry.spherical;
-
-        var point = new google.maps.LatLng(10.398671, -84.170756); 
-        var myOptions = {
-                zoom: 10,
-              center: point,
-              mapTypeId: 'satellite'
-        };
-        map = new google.maps.Map(document.getElementById("map_canvas"),
-            myOptions);
-      }
-</script>
 
 
 <div class="left" style="float: left; ">

@@ -55,8 +55,7 @@ class Koordinatjembatan extends CI_Controller{
         $latest_donation_id = $this->session->userdata('latest_donation_id')['id'];
         // var_dump($donor_id); die();
         $this->common_model->addLatLng($postData['latitude'], $postData['longitude'], $donor_id, $latest_donation_id);
-        // redirect('/maploader');
-        $this->load->view('maps/index.php');
+        redirect('/maploader');
     }
 
 }
