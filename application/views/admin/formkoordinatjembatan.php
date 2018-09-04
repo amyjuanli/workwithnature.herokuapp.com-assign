@@ -15,7 +15,7 @@
               
                 <!-- <div class="panel-body"> -->
                     <div class="right" style="float: left; padding-left: 10%">
-                    <form action="admin/koordinatjembatan/storeCoordsByDonor" method="post">
+                    <form action="/addcoords" method="post">
                         <!-- <div class="row"> -->
                               <div class="col-md-7 col-sm-6">
                                     <div class="form-group">
