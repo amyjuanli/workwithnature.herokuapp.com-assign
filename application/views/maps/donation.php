@@ -13,8 +13,6 @@ if (!empty($donation)) {
 
 <script type="text/javascript">
     function initialize() {
-        spherical = google.maps.geometry.spherical;
-
         var point = new google.maps.LatLng(10.398671, -84.170756); 
         var myOptions = {
                 zoom: 8,
