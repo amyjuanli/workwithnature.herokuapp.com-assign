@@ -14,7 +14,7 @@ class CoordinateController extends CI_Controller{
     }
     
     function index(){
-        $data = array ('content' => 'admin/formkoordinatjembatan',
+        $data = array ('content' => 'map/coordinate',
         'itemkoordinat'=>$this->common_model->getAll());
         $this->load->view('templates/template-admin',$data);
     }

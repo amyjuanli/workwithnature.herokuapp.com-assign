@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'IndividualController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
 $route['register_individual'] = 'IndividualController/register_individual';
 $route['donate_now'] = 'IndividualController/donate_now';
 $route['logged_in'] = 'IndividualController/logged_in';
@@ -19,7 +20,6 @@ $route['show'] = 'MapController/show';
 $route['donation/show/(:num)'] = 'MapController/donation/$1';
 $route['map'] = 'MapController';
 $route['maploader'] = 'MapController/maploader';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+
 
 
