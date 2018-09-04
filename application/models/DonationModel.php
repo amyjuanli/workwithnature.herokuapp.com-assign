@@ -1,6 +1,6 @@
 <?php
 
-class DonationModel extends CI_Model {
+class Donationmodel extends CI_Model {
    public function getUserByEmail($email)
    {
        $sql = 'SELECT id, firstname, insertion, lastname FROM donors WHERE email=?';
