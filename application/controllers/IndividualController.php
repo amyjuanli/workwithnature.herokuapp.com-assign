@@ -10,7 +10,6 @@ class IndividualController extends CI_Controller {
 
 	public function register_individual()
 	{
-		die('form');
 		$this->load->view('register_individual');
 	}
 

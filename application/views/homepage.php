@@ -120,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <br>
 
-        <form action="individualcontroller/register_individual" method="POST">
+        <form action="/register_individual" method="POST">
             <input class="button" type="submit" value="Donate now" name="donatenow">
         </form>
 
