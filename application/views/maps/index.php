@@ -45,12 +45,7 @@
 
 
 </div>
-
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDq3kPPoW_ZkOIUKaFHTWhgeZXwi-k_8rg&callback=initialize"></script>
-<script>
 <?php
-
 $this->load->view('maps/layout', [
         'content' => ob_get_clean(),
 ]);
