@@ -132,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2>Company donors</h2>
             <p class="lead textstyling">Interested in donating to Work With Nature as a company? Click below to leave your contact details and we will reach out to you.</p>
 
-            <form action="companycontroller/index" method="POST">
+            <form action="/company" method="POST">
             <input class="button" type="submit" value="Contact form" name="contact">
         </form>
 
