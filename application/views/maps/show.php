@@ -8,14 +8,12 @@ if (!empty($donations)) {
 }
 ?>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   console.log(donations[0]);
-</script>
+</script> -->
 
 <script type="text/javascript">
     function initialize() {
-        spherical = google.maps.geometry.spherical;
-
         var point = new google.maps.LatLng(10.398671, -84.170756); 
         var myOptions = {
                 zoom: 8,
@@ -44,27 +42,6 @@ if (!empty($donations)) {
             }
         }); 
         }
-    }
-
-  // add a rectangle on click 
- function addLating(event) {
-          var lat = event.latLng.lat();
-          var lng = event.latLng.lng();
-          console.log("lat: " + lat + ", long: " + lng);
-          var rectangle = new google.maps.Rectangle({
-            strokeColor: '#00FF00',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#00FF00',
-            fillOpacity: 0.35,
-            map: map,
-            bounds: {
-              north: lat + .0001,
-              south: lat - .0001,
-              east: lng + .0001,
-              west: lng - .0001
-            }
-        });
     }
 
     
