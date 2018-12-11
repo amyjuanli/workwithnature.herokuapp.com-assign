@@ -39,7 +39,7 @@
 
 
 	  				<!-- <div class="donatenow"> -->
-						<a  class="btn button" role="button" href="/individualcontroller/donate_now">Adopt a square meter for only €2,50</a>
+						<a  class="btn button" role="button" href="/donate_now">Adopt a square meter for only €2,50</a>
 					<!-- </div> -->
 			</div>
 
@@ -53,6 +53,3 @@
 $this->load->view('maps/layout', [
         'content' => ob_get_clean(),
 ]);
-
-
-
